@@ -1,1 +1,4 @@
 Flask==2.1.1
+IPython==7.9.0
+Pillow==7.1.2
+stability-sdk==0.2.4
