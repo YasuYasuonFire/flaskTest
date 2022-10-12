@@ -39,7 +39,7 @@ def stable(text):
         seed=34567, # if provided, specifying a random seed makes results deterministic
         steps=30, # defaults to 50 if not specified
     )
-
+    
     # iterating over the generator produces the api response
     for resp in answers:
         for artifact in resp.artifacts:
@@ -49,5 +49,5 @@ def stable(text):
                     "Please modify the prompt and try again.")
             if artifact.type == generation.ARTIFACT_IMAGE:
                 img = Image.open(io.BytesIO(artifact.binary))
-                img.save('./output.jpg')
-                return send_file('./output.jpg', mimetype='image/png')
+                img.save('/tmp/output.jpg')
+                return send_file('/tmp/output.jpg', mimetype='image/png')
