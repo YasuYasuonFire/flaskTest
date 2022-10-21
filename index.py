@@ -1,4 +1,6 @@
 from flask import Flask,send_file
+from flask_cors import CORS
+
 import io
 import os
 import warnings
@@ -9,6 +11,7 @@ from stability_sdk import client
 import stability_sdk.interfaces.gooseai.generation.generation_pb2 as generation
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route("/")
 def hello_world():
