@@ -35,6 +35,9 @@ def stable(text):
         verbose=True,
     )
 
+    #debug
+    print(text)
+
     # the object returned is a python generator
     answers = stability_api.generate(
         #prompt="houston, we are a 'go' for launch!",
