@@ -35,14 +35,11 @@ def stable(text):
         verbose=True,
     )
 
-    #debug
-    print(text)
-
     # the object returned is a python generator
     answers = stability_api.generate(
         #prompt="houston, we are a 'go' for launch!",
         prompt=text,
-        seed=34567, # if provided, specifying a random seed makes results deterministic
+        #seed=34567, # if provided, specifying a random seed makes results deterministic
         steps=30, # defaults to 50 if not specified
     )
     
